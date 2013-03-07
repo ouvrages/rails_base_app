@@ -60,7 +60,6 @@ gem 'secret_token_replacer', :git => 'git://github.com/digineo/secret_token_repl
 
 gem 'devise'
 gem 'cancan'
-gem "rolify"
 
 gem 'ouvrages_scaffold', :path => 'vendor/ouvrages_scaffold'
 
