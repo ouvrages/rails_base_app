@@ -1,0 +1,3 @@
+[submodule "vendor/ouvrages_scaffold"]
+	path = vendor/ouvrages_scaffold
+	url = git://github.com/ouvrages/ouvrages_scaffold.git

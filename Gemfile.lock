@@ -10,14 +10,10 @@ GIT
   specs:
     bootstrap_forms (2.0.8)
 
-GIT
-  remote: git://github.com/ouvrages/rails-cancan-bootstrap-scaffold.git
-  revision: c85405d7c28815c058fcc9a18a8f7498e6df7bfd
-  branch: rails_base_app
+PATH
+  remote: vendor/ouvrages_scaffold
   specs:
-    rails-cancan-bootstrap-scaffold (0.0.1)
-      bootstrap_forms
-      httparty
+    ouvrages_scaffold (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -85,9 +81,6 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.1)
-    httparty (0.10.2)
-      multi_json (~> 1.0)
-      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
@@ -101,7 +94,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.1)
-    multi_xml (0.5.3)
     mysql2 (0.3.11)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
@@ -199,9 +191,9 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mysql2
+  ouvrages_scaffold!
   quiet_assets
   rails (~> 3.2.12)
-  rails-cancan-bootstrap-scaffold!
   rolify
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
