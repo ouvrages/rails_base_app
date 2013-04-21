@@ -50,6 +50,7 @@ gem 'jquery-rails'
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem "spork-rails"
+  gem 'factory_girl_rails'
 end
 
 gem 'haml-rails'
