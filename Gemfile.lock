@@ -10,13 +10,6 @@ GIT
   specs:
     bootstrap_forms (2.0.8)
 
-PATH
-  remote: vendor/ouvrages_scaffold
-  specs:
-    ouvrages_scaffold (0.1.0)
-      bootstrap_forms
-      httparty
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -86,7 +79,7 @@ GEM
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.1)
-    httparty (0.10.2)
+    httparty (0.11.0)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
     i18n (0.6.1)
@@ -102,9 +95,12 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.1)
-    multi_xml (0.5.3)
+    multi_xml (0.5.4)
     mysql2 (0.3.11)
     orm_adapter (0.4.0)
+    ouvrages_scaffold (0.1.0)
+      bootstrap_forms
+      httparty
     polyglot (0.3.3)
     quiet_assets (1.0.1)
       railties (~> 3.1)
@@ -199,7 +195,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mysql2
-  ouvrages_scaffold!
+  ouvrages_scaffold
   quiet_assets
   rails (~> 3.2.12)
   rspec-rails (~> 2.0)

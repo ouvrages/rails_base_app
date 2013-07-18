@@ -61,10 +61,7 @@ gem 'secret_token_replacer', :git => 'git://github.com/digineo/secret_token_repl
 gem 'devise'
 gem 'cancan'
 
-gem 'ouvrages_scaffold', :path => 'vendor/ouvrages_scaffold'
-
-gem 'bootstrap_forms',
-    #:path => '../bootstrap_forms'
-    :git => 'git://github.com/ouvrages/bootstrap_forms.git'
+gem 'ouvrages_scaffold'
+gem 'bootstrap_forms', :git => 'git://github.com/ouvrages/bootstrap_forms.git'
 
 gem 'crummy', '~> 1.7.0'
