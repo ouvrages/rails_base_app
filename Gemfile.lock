@@ -94,11 +94,11 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
-    multi_json (1.6.1)
+    multi_json (1.7.7)
     multi_xml (0.5.4)
     mysql2 (0.3.11)
     orm_adapter (0.4.0)
-    ouvrages_scaffold (0.1.0)
+    ouvrages_scaffold (0.1.1)
       bootstrap_forms
       httparty
     polyglot (0.3.3)
