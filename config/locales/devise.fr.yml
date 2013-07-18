@@ -1,10 +1,12 @@
 # https://raw.github.com/tigrish/devise-i18n/master/locales/fr.yml
+
 fr:
   devise:
     confirmations:
       confirmed: Votre compte a été confirmé avec succès. Vous êtes désormais connecté.
       send_instructions: Vous allez recevoir sous quelques minutes un email comportant des instructions sur la façon de confirmer votre compte.
       send_paranoid_instructions: Si votre email existe sur notre base de données, vous recevrez sous quelques minutes un message avec des instructions sur la façon de confirmer votre compte.
+      resend_confirmation_instructions: Envoyer de nouveau les instructions de confirmation
     failure:
       already_authenticated: Vous êtes déjà connecté.
       inactive: Votre compte n'est pas encore activé.
@@ -18,10 +20,22 @@ fr:
     mailer:
       confirmation_instructions:
         subject: Instructions de confirmation
+        welcome: Bienvenue %{email}
+        you_can_confirm: "Vous pouvez confirmer votre e-mail en cliquant sur le lien ci-dessous :"
+        confirm_my_account: "Confirmer mon e-mail"
       reset_password_instructions:
         subject: Instructions pour changer le mot de passe
+        hello: Bonjour %{email}
+        someone_requested: "Quelqu'un a demandé un lien pour changer votre mot de passe. Vous pouvez le faire en cliquant sur le lien ci-dessous :"
+        change_my_password: "Changer mon mot de passe"
+        not_you: Si ce n'est pas vous qui avez fait cette demande, ignorez ce message.
+        wont_change: Votre mot de passe ne sera pas changé tant que vous n'aurez pas cliqué sur le lien ci-dessus et créé un nouveau mot de passe.
       unlock_instructions:
         subject: Instructions pour déverrouiller le compte
+        hello: Bonjour %{email}
+        locked: Votre compte a été bloqué suite à un trop grand nombre de tentatives de connexions échouées.
+        click_below: "Cliquez sur le lien ci-dessous pour débloquer votre compte :"
+        unlock_my_account: "Débloquer mon compte"
     omniauth_callbacks:
       failure: ! 'Nous n''avons pas pu vous autoriser à %{kind} pour la raison suivante : ''%{reason}''.'
       success: Autorisé avec succès par votre compte %{kind}.
@@ -31,6 +45,13 @@ fr:
       send_paranoid_instructions: Si votre email existe dans notre base de données, vous recevrez un lien vous permettant de récupérer votre mot de passe.
       updated: Votre mot de passe a été modifié avec succès. Vous êtes maintenant connecté.
       updated_not_active: Votre mot de passe a été modifié avec succès.
+      edit:
+        change_your_password: Modification de votre mot de passe
+        new_password: "Nouveau mot de passe"
+        confirm_new_password: "Confirmation de votre nouveau mot de passe"
+      new:
+        forgot_your_password: "Mot de passe oublié ?"
+        send_me_reset_password_instructions: "Envoyer les instructions pour réinitialiser mon mot de passe"
     registrations:
       destroyed: Au revoir ! Votre compte a été annulé avec succès. Nous espérons vous revoir bientôt.
       signed_up: Bienvenue ! Vous vous êtes enregistré avec succès
@@ -62,6 +83,7 @@ fr:
       send_instructions: Vous allez recevoir un email sous quelques minutes contenant les instructions nécessaires au débloquage de votre compte.
       send_paranoid_instructions: Si votre compte existe, vous recevrez un email indiquant comment le déverrouiller sous quelques minutes.
       unlocked: Votre compte a été débloqué avec succès. Veuillez vous connecter.
+      resend_unlock_instructions: "Envoyer de nouveau les instructions pour débloquer mon compte"
     shared:
       links:
         sign_in: "Connexion"
