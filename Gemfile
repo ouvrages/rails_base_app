@@ -51,6 +51,10 @@ group :test, :development do
   gem "rspec-rails", "~> 2.0"
   gem "spork-rails"
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'timecop'
 end
 
 gem 'haml-rails'
