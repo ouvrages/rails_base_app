@@ -3,7 +3,7 @@
 fr:
   devise:
     confirmations:
-      confirmed: Votre compte a été confirmé avec succès. Vous êtes désormais connecté.
+      confirmed: Votre compte a été confirmé. Vous êtes désormais connecté.
       send_instructions: Vous allez recevoir sous quelques minutes un email comportant des instructions sur la façon de confirmer votre compte.
       send_paranoid_instructions: Si votre email existe sur notre base de données, vous recevrez sous quelques minutes un message avec des instructions sur la façon de confirmer votre compte.
       resend_confirmation_instructions: Envoyer de nouveau les instructions de confirmation
@@ -13,7 +13,7 @@ fr:
       invalid: Email ou mot de passe incorrect.
       invalid_token: Jeton d'authentification incorrect.
       locked: Votre compte est verrouillé.
-      not_found_in_database: Email ou mot de passe incorrect.
+      not_found_in_database: Identifiant ou mot de passe incorrect.
       timeout: Votre session est périmée, veuillez vous reconnecter pour continuer.
       unauthenticated: Vous devez vous connecter ou vous enregistrer pour continuer.
       unconfirmed: Vous devez confirmer votre compte par email.
@@ -38,13 +38,13 @@ fr:
         unlock_my_account: "Débloquer mon compte"
     omniauth_callbacks:
       failure: ! 'Nous n''avons pas pu vous autoriser à %{kind} pour la raison suivante : ''%{reason}''.'
-      success: Autorisé avec succès par votre compte %{kind}.
+      success: Autorisé par votre compte %{kind}.
     passwords:
       no_token: Vous ne pouvez pas accéder à cette page si vous ne provenez pas d'un email de réinitialisation de mot de passe. Si vous venez en effet d'un tel email, vérifiez que vous avez copié l'adresse URL en entier.
       send_instructions: Vous allez recevoir sous quelques minutes un email vous indiquant comment réinitialiser votre mot de passe.
       send_paranoid_instructions: Si votre email existe dans notre base de données, vous recevrez un lien vous permettant de récupérer votre mot de passe.
-      updated: Votre mot de passe a été modifié avec succès. Vous êtes maintenant connecté.
-      updated_not_active: Votre mot de passe a été modifié avec succès.
+      updated: Votre mot de passe a été modifié. Vous êtes maintenant connecté.
+      updated_not_active: Votre mot de passe a été modifié.
       edit:
         change_your_password: Modification de votre mot de passe
         new_password: "Nouveau mot de passe"
@@ -53,13 +53,13 @@ fr:
         forgot_your_password: "Mot de passe oublié ?"
         send_me_reset_password_instructions: "Envoyer les instructions pour réinitialiser mon mot de passe"
     registrations:
-      destroyed: Au revoir ! Votre compte a été annulé avec succès. Nous espérons vous revoir bientôt.
-      signed_up: Bienvenue ! Vous vous êtes enregistré avec succès
-      signed_up_but_inactive: Vous vous êtes enregistré avec succès. Cependant, nous n'avons pas pu vous connecter car votre compte n'a pas encore été activé.
-      signed_up_but_locked: Vous vous êtes enregistré avec succès. Cependant, nous n'avons pas pu vous connecter car votre compte est verrouillé.
+      destroyed: Votre compte a été annulé. Nous espérons vous revoir bientôt.
+      signed_up: Vous vous êtes maintenant enregistré
+      signed_up_but_inactive: Vous êtes maintenant enregistré. Cependant nous n'avons pas pu vous connecter car votre compte n'a pas encore été activé.
+      signed_up_but_locked: Vous êtes maintenant enregistré. Cependant nous n'avons pas pu vous connecter car votre compte est verrouillé.
       signed_up_but_unconfirmed: Un message avec un lien de confirmation vous a été envoyé par mail. Veuillez suivre ce lien pour activer votre compte.
-      update_needs_confirmation: Vous avez modifié votre compte avec succès, mais nous devons vérifier votre nouvelle adresse email. Veuillez consulter vos emails et cliquer sur le lien de confirmation pour finalizer votre nouvelle adresse.
-      updated: Votre compte a été modifié avec succès.
+      update_needs_confirmation: Vous avez modifié votre compte, mais nous devons vérifier votre nouvelle adresse email. Veuillez consulter vos emails et cliquer sur le lien de confirmation pour finalizer votre nouvelle adresse.
+      updated: Votre compte a été modifié.
       new:
         title: Création d'un compte
         submit: Créer le compte
@@ -74,15 +74,15 @@ fr:
           button: Supprimer mon compte
           confirm: "Votre compte sera supprimé. Êtes vous sûr ?"
     sessions:
-      signed_in: Connecté avec succès.
-      signed_out: Déconnecté avec succès.
+      signed_in: Vous êtes maintenant connecté.
+      signed_out: Vous avez été dédonnecté.
       new:
         title: Connexion
         submit: Connexion
     unlocks:
       send_instructions: Vous allez recevoir un email sous quelques minutes contenant les instructions nécessaires au débloquage de votre compte.
       send_paranoid_instructions: Si votre compte existe, vous recevrez un email indiquant comment le déverrouiller sous quelques minutes.
-      unlocked: Votre compte a été débloqué avec succès. Veuillez vous connecter.
+      unlocked: Votre compte a été débloqué. Veuillez vous connecter.
       resend_unlock_instructions: "Envoyer de nouveau les instructions pour débloquer mon compte"
     shared:
       links:
