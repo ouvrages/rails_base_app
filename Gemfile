@@ -67,6 +67,7 @@ gem 'cancan'
 
 gem 'ouvrages_scaffold'
 gem 'bootstrap_forms', :git => 'git://github.com/ouvrages/bootstrap_forms.git'
+gem 'bootstrap-datepicker-rails'
 
 gem 'crummy', '~> 1.7.0'
 
