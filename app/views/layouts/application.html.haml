@@ -25,6 +25,11 @@
 
     #main{:role => "main"}
       .container
+        - flash.each do |kind, value|
+          .alert{class: "alert-#{kind}"}
+            %button.close{"data-dismiss" => "alert", :type => "button"} &times;
+            = value
+            
         - render_crumbs do |crumbs|
           %ul.breadcrumb
             - crumbs.each_with_index do |crumb, index|
@@ -35,10 +40,5 @@
               - else
                 %li.active= crumb[0]
 
-        - flash.each do |kind, value|
-          .alert{class: "alert-#{kind}"}
-            %button.close{"data-dismiss" => "alert", :type => "button"} &times;
-            = value
-            
         = yield
     = javascript_include_tag "application"
