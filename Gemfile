@@ -73,3 +73,10 @@ gem 'crummy', '~> 1.7.0'
 
 gem 'seed-fu'
 gem 'exception_notification'
+
+gem 'delocalize'
+gem 'nested_form'
+gem 'select2-rails'
+
+gem 'letters', group: [:development, :test]
+
