@@ -72,3 +72,4 @@ gem 'bootstrap-datepicker-rails'
 gem 'crummy', '~> 1.7.0'
 
 gem 'seed-fu'
+gem 'exception_notification'
