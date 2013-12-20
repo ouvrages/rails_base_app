@@ -65,7 +65,7 @@ namespace :app do
   end
   
   def replace_all(directory, find, replace)
-    run_command("grep ---exclude-dir=.git --exclude-dir=.bundle -rl #{find} #{directory} | xargs sed -i 's/#{find}/#{replace}/g'")
+    run_command("grep --exclude-dir=.git --exclude-dir=.bundle -rl #{find} #{directory} | xargs sed -i 's/#{find}/#{replace}/g'")
   end
   
   def get_underscore(args)
