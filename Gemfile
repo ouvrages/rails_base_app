@@ -50,3 +50,8 @@ gem 'foundation-rails'
 gem 'rails_layout', group: :development
 
 gem 'devise'
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+end
