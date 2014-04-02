@@ -44,14 +44,19 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'haml-rails'
-
-gem 'foundation-rails'
-gem 'rails_layout', group: :development
-
-gem 'devise'
-
 group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'timecop'
 end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+end
+
+gem 'haml-rails'
+gem 'foundation-rails'
+gem 'rails_layout', group: :development
+gem 'devise'
+
