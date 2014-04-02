@@ -55,9 +55,13 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+group :development do
+  gem 'rails_layout'
+  gem 'quiet_assets'
+end
+
 gem 'haml-rails'
 gem 'foundation-rails'
-gem 'rails_layout', group: :development
 gem 'devise'
 gem 'cancancan', '~> 1.7'
 gem 'seed-fu', github: 'mbleigh/seed-fu'
