@@ -60,4 +60,4 @@ gem 'foundation-rails'
 gem 'rails_layout', group: :development
 gem 'devise'
 gem 'cancancan', '~> 1.7'
-gem 'seed-fu'
+gem 'seed-fu', github: 'mbleigh/seed-fu'
