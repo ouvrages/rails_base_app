@@ -43,3 +43,8 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'haml-rails'
+
+gem 'foundation-rails'
+gem 'rails_layout', group: :development
