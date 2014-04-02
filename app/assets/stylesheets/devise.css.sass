@@ -1,0 +1,33 @@
+@import foundation
+
+.authform
+  padding-top: 30px
+  max-width: 320px
+  margin: 0 auto
+
+.authform form
+  +panel
+  padding-bottom: 60px
+
+.authform form a
+  font-size: rem-calc(13)
+
+.authform form p
+  font-size: rem-calc(13)
+
+.authform fieldset
+  +panel
+
+.authform #error_explanation
+  @extend .alert-box
+  @extend .alert
+
+.authform #error_explanation h2
+  font-size: rem-calc(16)
+  color: white
+
+.button-xs
+  @extend .button
+  @extend .radius
+  @extend .tiny
+
