@@ -24,6 +24,7 @@ namespace :app do
     # change the stuff
     replace_all(directory, Rails.application.class.parent_name, name)
     replace_all(directory, Rails.application.class.parent_name.underscore, underscore)
+    replace_all(directory, Rails.application.class.parent_name.underscore.titleize, underscore.titleize)
     key = SecureRandom.hex(64)
     devise_initializer = File.join(directory, "config/initializers/devise.rb")
     devise = File.read(devise_initializer)
