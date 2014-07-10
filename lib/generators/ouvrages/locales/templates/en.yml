@@ -1,0 +1,44 @@
+en:
+  activerecord:
+    models:
+      <%= singular_table_name %>: <%= capitalize_first_letter(resource) %>
+    attributes:
+      <%= singular_table_name %>:
+<%- columns.each do |column| -%>
+        <%= column.name %>: <%= capitalize_first_letter(translate(column.name.humanize)) %>
+<%- end -%>
+  
+  <%= plural_table_name %>:
+    index:
+      title: List of <%= resources %>
+      actions: Actions
+      show: Show
+      edit: &edit Edit
+      destroy: &destroy Delete
+      confirm: &confirm <%= capitalize_first_letter(the_resource) %> will by deleted. Are you sure?
+      new: Add <%= a_resource %>
+      empty: The list is empty.
+
+    edit:
+      title: "Modification <%= of_resource %> %{name}"
+
+    new:
+      title: New <%= resource %>
+
+    form:
+      submit: Save <%= the_resource %>
+      cancel: Cancel
+      
+    show:
+      title: "<%= capitalize_first_letter(resource) %> %{name}"
+      edit: *edit
+      destroy: *destroy
+      confirm: *confirm
+      back: Back
+
+    created: <%= capitalize_first_letter the_resource %> was successfully added.
+    updated: <%= capitalize_first_letter the_resource %> was successfully updated.
+    removed: <%= capitalize_first_letter the_resource %> was successfully removed.
+      
+  navigation:
+    <%= plural_table_name %>: <%= capitalize_first_letter(resources) %>

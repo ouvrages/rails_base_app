@@ -1,4 +1,8 @@
 - flash.each do |name, msg|
   - if msg.is_a?(String)
-    .flash{class: name.to_is}
+    - klass = case name
+      - when :success then "alert-success"
+      - when :notice then "alert-info"
+      - else "alert-info"
+    .alert{class: klass}
       = msg

@@ -69,3 +69,6 @@ gem 'rails-i18n', '~> 4.0.0'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'will_paginate-bootstrap'
+gem 'will-paginate-i18n'
+gem 'bootstrap_form'

@@ -1,0 +1,30 @@
+- content_for :title, t('.title')
+
+- @<%= plural_resource_name %> = @<%= plural_resource_name %>.paginate(page: params[:page], per_page: 50)
+
+.row
+  .col-md-12
+    - if @<%= plural_resource_name %>.blank?
+      %p.alert.alert-notice= t(".empty")
+    - else
+      %table.table.table-striped
+        %thead
+          %tr
+            <%- columns.each do |column| -%>
+            %th= <%= resource_name.classify %>.human_attribute_name(:<%= column.name %>)
+            <%- end -%>
+            %th= t('.actions')
+        %tbody
+          - @<%= plural_resource_name %>.each do |<%= resource_name %>|
+            %tr
+              <%- columns.each do |column| -%>
+              %td= <%= resource_name %>.<%= column.name %>
+              <%- end -%>
+              %td
+                = link_to t('.show'), <%= singular_controller_routing_path %>_path(<%= resource_name %>), class: 'btn btn-default btn-xs'
+                = link_to t('.edit'), edit_<%= singular_controller_routing_path %>_path(<%= resource_name %>), class: 'btn btn-default btn-xs' if can? :update, <%= resource_name %>
+                = link_to t('.destroy'), <%= singular_controller_routing_path %>_path(<%= resource_name %>), method: :delete, confirm: t('.confirm'), class: 'btn btn-xs btn-danger' if can? :destroy, <%= resource_name %>
+
+      = will_paginate @<%= plural_resource_name %>, renderer: BootstrapPagination::Rails
+
+    = link_to t('.new'), new_<%= singular_controller_routing_path %>_path, class: 'btn btn-primary' if can? :create, <%= model_name %>

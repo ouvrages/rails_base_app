@@ -6,4 +6,17 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to root_path, :alert => t("access_denied", default: "Access denied")
   end
+
+  protected
+
+  def current_user
+    nil
+  end
+  helper_method :current_user
+
+  def add_crumb(label, path = nil)
+    @breadcrumb ||= []
+    @breadcrumb << [label, path]
+  end
+  helper_method :add_crumb
 end

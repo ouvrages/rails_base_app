@@ -17,5 +17,14 @@
       = render 'layouts/navigation'
     %main{:role => "main"}
       .container
+        - if @breadcrumb.present?
+          %ol.breadcrumb
+            - @breadcrumb.each do |label, url|
+              %li
+                - if url.present?
+                  %a{href: url}= label
+                - else
+                  = label
+
         = render 'layouts/messages'
         = yield
