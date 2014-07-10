@@ -62,7 +62,6 @@ group :development do
 end
 
 gem 'haml-rails'
-gem 'foundation-rails'
 gem 'compass-rails'
 gem 'cancancan', '~> 1.7'
 gem 'seed-fu', github: 'mbleigh/seed-fu'
