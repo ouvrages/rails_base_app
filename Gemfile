@@ -66,3 +66,6 @@ gem 'compass-rails'
 gem 'cancancan', '~> 1.7'
 gem 'seed-fu', github: 'mbleigh/seed-fu'
 gem 'rails-i18n', '~> 4.0.0'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
