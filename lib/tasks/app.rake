@@ -15,6 +15,9 @@ namespace :app do
     run_command("git clone #{Rails.root} #{directory}")
     run_command("git remote add #{underscore} #{directory} || git remote set-url #{underscore} #{directory}")
     
+    # move branch to master
+    dir_command(directory, "git branch -m master")
+
     # remove tracking with original branch
     dir_command(directory, "git remote rm origin")
     
