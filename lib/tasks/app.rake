@@ -25,12 +25,6 @@ namespace :app do
     replace_all(directory, Rails.application.class.parent_name, name)
     replace_all(directory, Rails.application.class.parent_name.underscore, underscore)
     replace_all(directory, Rails.application.class.parent_name.underscore.titleize, underscore.titleize)
-    key = SecureRandom.hex(64)
-    devise_initializer = File.join(directory, "config/initializers/devise.rb")
-    devise = File.read(devise_initializer)
-    puts devise
-    raise "Key not found" unless devise.gsub!(/config\.secret_key = '.+?'/, "config.secret_key = '#{key}'")
-    File.open(devise_initializer, "w") { |f| f.write devise }
     
     dir_command(directory, "git add .")
     dir_command(directory, "git commit -a -m 'renamed app to #{name}'")

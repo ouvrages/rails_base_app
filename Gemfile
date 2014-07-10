@@ -64,7 +64,6 @@ end
 gem 'haml-rails'
 gem 'foundation-rails'
 gem 'compass-rails'
-gem 'devise'
 gem 'cancancan', '~> 1.7'
 gem 'seed-fu', github: 'mbleigh/seed-fu'
 gem 'rails-i18n', '~> 4.0.0'
