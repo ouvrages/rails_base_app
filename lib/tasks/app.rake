@@ -29,7 +29,12 @@ namespace :app do
     dir_command(directory, "git add .")
     dir_command(directory, "git commit -a -m 'renamed app to #{name}'")
     
-    dir_command(directory, "rake secret:replace")
+    key = SecureRandom.hex(64)
+    secret_initializer = File.join(directory, "config/initializers/secret_token.rb")
+    secret = File.read(secret_initializer)
+    raise "Key not found" unless secret.gsub!(/\.config\.secret_key_base = '.+?'/, ".config.secret_key_base = '#{key}'")
+    File.open(secret_initializer, "w") { |f| f.write secret }
+
     dir_command(directory, "git add .")
     dir_command(directory, "git commit -a -m 'regenerated secret token'")
 
