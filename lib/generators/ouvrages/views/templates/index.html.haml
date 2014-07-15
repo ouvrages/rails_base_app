@@ -4,6 +4,10 @@
 
 .row
   .col-md-12
+    .text-right
+      = link_to icon_label(:plus, t('.new')), new_<%= singular_controller_routing_path %>_path, class: 'btn btn-primary' if can? :create, <%= model_name %>
+.row
+  .col-md-12
     - if @<%= plural_resource_name %>.blank?
       %p.alert.alert-notice= t(".empty")
     - else
@@ -26,5 +30,3 @@
                 = link_to t('.destroy'), <%= singular_controller_routing_path %>_path(<%= resource_name %>), method: :delete, confirm: t('.confirm'), class: 'btn btn-xs btn-danger' if can? :destroy, <%= resource_name %>
 
       = will_paginate @<%= plural_resource_name %>, renderer: BootstrapPagination::Rails
-
-    = link_to t('.new'), new_<%= singular_controller_routing_path %>_path, class: 'btn btn-primary' if can? :create, <%= model_name %>
