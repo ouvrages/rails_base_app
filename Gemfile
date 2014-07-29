@@ -50,6 +50,7 @@ group :test do
   gem 'database_cleaner'
   gem 'poltergeist'
   gem 'timecop'
+  gem 'rspec'
 end
 
 group :development, :test do
