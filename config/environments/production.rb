@@ -77,4 +77,13 @@ RailsBaseApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  if ENV["ERROR_RECIPIENTS"].present?
+    config.middleware.use ExceptionNotification::Rack,
+      email: {
+        email_prefix: "[RailsBaseApp] ",
+        sender_address: ENV["ERROR_SENDER"].presence || ENV["ERROR_RECIPIENTS"],
+        exception_recipients: ENV["ERROR_RECIPIENTS"].split(":"),
+      }
+  end
 end
