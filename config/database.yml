@@ -19,10 +19,13 @@ test: &test
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: <%= ENV["MYSQL_DB"] %>
   pool: 5
-  timeout: 5000
+  host: <%= ENV["MYSQL_HOST"] %>
+  username: <%= ENV["MYSQL_USER"] %>
+  password: <%= ENV["MYSQL_PASSWORD"] %>
 
 cucumber:
   <<: *test
