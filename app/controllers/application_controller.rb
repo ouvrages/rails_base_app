@@ -9,11 +9,6 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def current_user
-    nil
-  end
-  helper_method :current_user
-
   def add_crumb(label, path = nil)
     @breadcrumb ||= []
     @breadcrumb << [label, path]
